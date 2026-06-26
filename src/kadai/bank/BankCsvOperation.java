@@ -41,11 +41,11 @@ public class BankCsvOperation {
 		System.out.println("口座開設完了");
 
 		// 取引情報CSV読み込み
-		try (BufferedReader br = new BufferedReader(new FileReader("transaction.csv"))) {
+		try (BufferedReader accountReader = new BufferedReader(new FileReader("transaction.csv"))) {
 
 			String line;
 
-			while ((line = br.readLine()) != null) {
+			while ((line = accountReader.readLine()) != null) {
 
 				String[] data = line.split(",");
 
