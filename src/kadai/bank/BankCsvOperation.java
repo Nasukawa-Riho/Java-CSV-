@@ -14,11 +14,11 @@ public class BankCsvOperation {
 		ArrayList<Bank> bankList = new ArrayList<>();
 
 		// 口座情報CSV読み込み
-		try (BufferedReader br = new BufferedReader(new FileReader("account.csv"))) {
+		try (BufferedReader accountReader = new BufferedReader(new FileReader("account.csv"))) {
 
 			String line;
 
-			while ((line = br.readLine()) != null) {
+			while ((line = accountReader.readLine()) != null) {
 
 				String[] data = line.split(",");
 
